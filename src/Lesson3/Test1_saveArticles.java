@@ -159,6 +159,16 @@ public class Test1_saveArticles {
                 "article Football is still on saved list",
                 5
         );
+        waitForElementAndClick(
+                By.xpath("//*[@resource-id='org.wikipedia:id/page_list_item_title'][@text='"+name2_of_folder+"']"),
+                "Cannot find article Football",
+                10
+        );
+        waitForElementPresent(
+                By.xpath("//*[@content-desc='"+name2_of_folder+"']"),
+                "Cannot find article Football in page",
+                10
+        );
     }
         private WebElement waitForElementPresent(By by, String error_message, long timeoutInSeconds)
         {
