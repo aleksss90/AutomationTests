@@ -36,7 +36,6 @@ public class Test3_rotateScreen {
 
     @After
     public void tearDown() {
-        driver.rotate((ScreenOrientation.PORTRAIT));
         driver.quit();
     }
 
