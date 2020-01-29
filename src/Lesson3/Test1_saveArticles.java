@@ -144,10 +144,10 @@ public class Test1_saveArticles {
                 "Cannot find 'Saved' articles ",
                 5
         );
-        swipeElementToLeft(
+        /*swipeElementToLeft(
                 By.xpath("//*[@text='"+name1_of_folder+"']"),
                 "Cannot swipe to delete Kotlin (programming language)"
-        );
+        );*/
 
         waitForElementNotPresent(
                 By.xpath("//*[@resource-id='org.wikipedia:id/page_list_item_title'][@text='"+name1_of_folder+"']"),
@@ -199,7 +199,7 @@ public class Test1_saveArticles {
             return wait.until(ExpectedConditions.invisibilityOfElementLocated(by)
             );
         }
-    protected void swipeElementToLeft(By by, String error_message)
+    /*protected void swipeElementToLeft(By by, String error_message)
     {
         WebElement element = waitForElementPresent(
                 by,
@@ -218,5 +218,5 @@ public class Test1_saveArticles {
                 .moveTo(left_x, middle_y)
                 .release()
                 .perform();
-    }
+    }*/
 }
