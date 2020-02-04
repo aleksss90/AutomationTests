@@ -1,8 +1,9 @@
 package Lesson4_refactoring;
 
 import lib.CoreTestCase;
-import lib.ui.MainPageObject;
 import lib.ui.SearchPageObject;
+import lib.ui.WelcomePageObject;
+import lib.ui.factories.SearchPageObjectFactory;
 import org.junit.Test;
 
 
@@ -14,8 +15,7 @@ public class ex3_cancellationSearch_ref extends CoreTestCase {
 
     @Test
     public void testCancellationSearch() {
-
-        SearchPageObject SearchPageObject = new SearchPageObject(driver);
+        SearchPageObject SearchPageObject = SearchPageObjectFactory.get(driver);
         SearchPageObject.initSearchInput();
         SearchPageObject.typeSearchLine("Automation");
         SearchPageObject.waitForSearchResult("Automation Master");
