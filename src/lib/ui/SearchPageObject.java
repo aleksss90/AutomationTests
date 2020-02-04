@@ -2,12 +2,13 @@ package lib.ui;
 
 import io.appium.java_client.AppiumDriver;
 
-public class SearchPageObject extends MainPageObject {
-    private static final String
-            SEARCH_INIT_ELEMENT = "id:org.wikipedia:id/search_container",
-            SEARCH_INPUT = "id:org.wikipedia:id/search_src_text",
-            SEARCH_CANCEL_BUTTON = "id:org.wikipedia:id/search_close_btn",
-            SEARCH_RESULT_BY_SUBSTRING_TPL = "xpath://*[contains(@text,'{SUBSTRING}')]";
+abstract public class SearchPageObject extends MainPageObject {
+    protected static String
+            SEARCH_INIT_ELEMENT,
+            SEARCH_INPUT,
+            SEARCH_CANCEL_BUTTON,
+            SEARCH_ARTICLES_IN_SAVED_LISTS,
+            SEARCH_RESULT_BY_SUBSTRING_TPL;
 
     public SearchPageObject(AppiumDriver driver) {
         super(driver);
